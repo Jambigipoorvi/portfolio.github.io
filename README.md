@@ -1,3 +1,4 @@
+<img src="path-to-image" alt="City Management Project Front Page" width="600" />
 ![City Management Project Front Page](https://example.com/city-management-cpp-project-front-page.jpg)
 
 <h1 align="center">Hi 👋, I'm Poorvi V Jambigi</h1>
