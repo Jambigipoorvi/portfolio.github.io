@@ -7,7 +7,7 @@
 
 - 👩‍💻 I’m looking to wrok on **c++,html,c,python**
 
-- 🤝 we have great **teammates**
+- 🤝 we make a great **team**
 
 - 💬 Ask me about **city management code**
 
