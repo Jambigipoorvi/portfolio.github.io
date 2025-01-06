@@ -1,3 +1,5 @@
+![City Management Project Front Page](https://example.com/city-management-cpp-project-front-page.jpg)
+
 <h1 align="center">Hi 👋, I'm Poorvi V Jambigi</h1>
 <h3 align="center">I’m Poorvi, a 2nd-year Computer Science Engineering student at KLE Society's Engineering College, Belgaum. Passionate about technology and creativity, I’m exploring areas like algorithms, databases, and problem-solving through exciting projects like city management. Beyond coding, I’m a nature lover, DIY enthusiast, and storyteller, always finding inspiration in everyday moments. My goal? To blend innovation and imagination to create impactful solutions for the future.</h3>
 
