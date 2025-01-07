@@ -210,6 +210,7 @@ void displayCityInfo()
             if (confirm == 'y' || confirm == 'Y')
             {
                 infrastructures.erase(it);
+
                 cout << "sure Infrastructure " << name << " has been deleted.\n";
             } else
             {
@@ -278,7 +279,9 @@ void updateInfrastructure(string name)
                 int choice;
                 cin >> choice;
 
-                switch (choice) {
+                switch (choice)
+                {
+
                     case 1:
                         cout << "Enter new name: ";
                         cin.ignore();
@@ -1453,14 +1456,14 @@ public:
     // Adds budget for a specific project
     void addProjectBudget(const string &project, int budget) {
         budgets.push_back(make_pair(project, budget));
-        cout << "Budget added for project \"" << project << "\": $" << budget << endl;
+        cout << "Budget added for project \"" << project << "\": rs" << budget << endl;
     }
 
     // Displays the budget details of all projects
     void displayBudgets() {
         cout << "\n--- Project Budgets ---\n";
         for (const auto &budget : budgets) {
-            cout << "Project: " << budget.first << ", Budget: $" << budget.second << endl;
+            cout << "Project: " << budget.first << ", Budget: rs" << budget.second << endl;
         }
         cout << endl;
     }
@@ -1993,16 +1996,20 @@ private:
     vector<Tour> tours;
 
 public:
-    // Adds a new tour with destination and price per person
-    void addTour(const string &name, const string &destination, double pricePerPerson) {
+
+    void addTour(const string &name, const string &destination, double pricePerPerson)
+     {
         tours.push_back({name, destination, {}, pricePerPerson});
+
         cout << "Tour added: " << name << " to " << destination << " (Price per person: rupees" << fixed << setprecision(2) << pricePerPerson << ")\n";
     }
 
     // Adds a visitor to an existing tour
     void addVisitorToTour(const string &tourName, const string &visitorName, int age, const string &nationality) {
-        for (auto &tour : tours) {
-            if (tour.name == tourName) {
+        for (auto &tour : tours)
+         {
+            if (tour.name == tourName)
+                {
                 tour.visitors.push_back({visitorName, age, nationality});
                 cout << "Visitor " << visitorName << " added to tour " << tourName << "\n";
                 return;
@@ -2016,20 +2023,26 @@ public:
         cout << "\n--- Available Tours ---\n";
         for (const auto &tour : tours) {
             cout << "- " << tour.name << " to " << tour.destination
-                 << " (Price per person: $" << fixed << setprecision(2) << tour.pricePerPerson
+                 << " (Price per person: rs" << fixed << setprecision(2) << tour.pricePerPerson
                  << ", Visitors: " << tour.visitors.size() << ")\n";
         }
     }
 
     // Displays visitors for a specific tour
-    void displayVisitorsForTour(const string &tourName) {
-        for (const auto &tour : tours) {
-            if (tour.name == tourName) {
+    void displayVisitorsForTour(const string &tourName)
+    {
+        for (const auto &tour : tours)
+            {
+            if (tour.name == tourName)
+            {
                 cout << "\n--- Visitors for " << tourName << " ---\n";
-                if (tour.visitors.empty()) {
+                if (tour.visitors.empty())
+                {
                     cout << "No visitors yet.\n";
-                } else {
-                    for (const auto &visitor : tour.visitors) {
+                } else
+                {
+                    for (const auto &visitor : tour.visitors)
+                    {
                         cout << "- " << visitor.name
                              << " (Age: " << visitor.age
                              << ", Nationality: " << visitor.nationality << ")\n";
@@ -2042,9 +2055,12 @@ public:
     }
 
     // Removes a tour by name
-    void removeTour(const string &tourName) {
-        for (auto it = tours.begin(); it != tours.end(); ++it) {
-            if (it->name == tourName) {
+    void removeTour(const string &tourName)
+    {
+        for (auto it = tours.begin(); it != tours.end(); ++it)
+            {
+            if (it->name == tourName)
+            {
                 tours.erase(it);
                 cout << "Tour " << tourName << " has been removed.\n";
                 return;
@@ -2054,13 +2070,16 @@ public:
     }
 
     // Calculates and displays total revenue for a tour
-    void calculateRevenue(const string &tourName) {
-        for (const auto &tour : tours) {
-            if (tour.name == tourName) {
+    void calculateRevenue(const string &tourName)
+    {
+        for (const auto &tour : tours)
+            {
+            if (tour.name == tourName)
+            {
                 double revenue = tour.visitors.size() * tour.pricePerPerson;
                 cout << "\n--- Revenue Report for " << tourName << " ---\n";
                 cout << "Total Visitors: " << tour.visitors.size() << "\n";
-                cout << "Total Revenue: $" << fixed << setprecision(2) << revenue << "\n";
+                cout << "Total Revenue: rs" << fixed << setprecision(2) << revenue << "\n";
                 return;
             }
         }
@@ -2068,26 +2087,32 @@ public:
     }
 
     // Suggests random destinations for new tours
-    void suggestRandomDestinations() {
+    void suggestRandomDestinations()
+    {
         const vector<string> suggestions = {"Paris", "Tokyo", "Sydney", "New York", "Cape Town", "Rome", "Istanbul"};
         cout << "\n--- Suggested Destinations ---\n";
-        for (const auto &destination : suggestions) {
+        for (const auto &destination : suggestions)
+            {
             cout << "- " << destination << "\n";
         }
     }
 
     // Displays a detailed report of all tours and visitors
-    void displayDetailedReport() {
+    void displayDetailedReport()
+    {
         cout << "\n--- Detailed Tourism Report ---\n";
-        for (const auto &tour : tours) {
+        for (const auto &tour : tours)
+            {
             cout << "\nTour: " << tour.name
                  << " to " << tour.destination
-                 << " (Price per person: $" << fixed << setprecision(2) << tour.pricePerPerson << ")\n";
+                 << " (Price per person: rs" << fixed << setprecision(2) << tour.pricePerPerson << ")\n";
             cout << "Visitors:\n";
-            if (tour.visitors.empty()) {
+            if (tour.visitors.empty())
+            {
                 cout << "  No visitors yet.\n";
             } else {
-                for (const auto &visitor : tour.visitors) {
+                for (const auto &visitor : tour.visitors)
+                {
                     cout << "  - " << visitor.name
                          << " (Age: " << visitor.age
                          << ", Nationality: " << visitor.nationality << ")\n";
@@ -2121,7 +2146,8 @@ public:
 using namespace std;
 
 
-struct Route {
+struct Route
+{
     int id;
     string source;
     string destination;
@@ -2132,7 +2158,8 @@ struct Route {
 };
 
 
-class TransportNetwork {
+class TransportNetwork
+{
 private:
     map<string, vector<Route>> routes;
     map<int, Route> routeDetails;
@@ -2142,7 +2169,7 @@ private:
 public:
     void addRoute(int id, const string& source, const string& destination,
                  int duration, double cost, int distance, const string& type)
-                  {
+    {
         Route route = {id, source, destination, duration, cost, distance, type};
         routes[source].push_back(route);
         routeDetails[id] = route;
@@ -2165,8 +2192,9 @@ public:
                          << ", Type: " << route.type
                          << ", To: " << route.destination
                          << ", Duration: " << route.duration << " mins"
-                         << ", Cost: $" << route.cost;
-                    if (route.distance > 0) {
+                         << ", Cost: rs" << route.cost;
+                    if (route.distance > 0)
+                    {
                         cout << ", Distance: " << route.distance << " km";
                     }
                     cout << "\n";
@@ -2255,12 +2283,13 @@ public:
 
         cout << (useCost ? "Cheapest" : "Fastest") << " route "
              << (type.empty() ? "" : "(" + type + ") ")
-             << "found: Total " << (useCost ? "cost: $" : "duration: ")
+             << "found: Total " << (useCost ? "cost: rs" : "duration: ")
              << costs[endLocation] << (useCost ? "" : " mins") << "\nPath: ";
 
         vector<string> path;
         string current = endLocation;
-        while (!current.empty()) {
+        while (!current.empty())
+        {
             path.push_back(current);
             current = previous[current];
         }
@@ -2349,7 +2378,7 @@ public:
         }
     }
     history.push({"updateRouteCost", {id, static_cast<int>(newCost)}});
-    cout << "Route ID " << id << " cost updated to $" << newCost << ".\n";
+    cout << "Route ID " << id << " cost updated to rs" << newCost << ".\n";
 }
 
 
@@ -2423,7 +2452,7 @@ void bookTicket(const string& source, const string& destination, const string& t
                  << "  From: " << route.source
                  << ", To: " << route.destination
                  << ", Type: " << route.type
-                 << ", Cost: $" << route.cost << "\n";
+                 << ", Cost: rs" << route.cost << "\n";
             history.push({"bookTicket", {route.id, -1}});
             return;
         }
@@ -2497,7 +2526,7 @@ void viewBookedTickets()
 
                      << ", Type: " << route.type
 
-                     << ", Cost: $" << route.cost << "\n";
+                     << ", Cost: rs" << route.cost << "\n";
             }
         }
     }
