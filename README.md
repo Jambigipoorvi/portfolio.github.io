@@ -1,23 +1,6 @@
 # City Management Project 🌆  
  
----
 
-## 👋 About Me  
-
-### Hi, I'm **Poorvi V Jambigi**!  
-- 🎓 **2nd-year Computer Science Engineering student** at KLE Society's Engineering College, Belgaum.  
-- 💻 Passionate about **technology, creativity, and problem-solving**.  
-- 🌿 Nature lover, DIY enthusiast, and storyteller, finding inspiration in everyday moments.  
-- 🛠 Currently exploring **algorithms, data structures, and city management solutions in C++**.  
-- 🔭 **Working on**: City Management Project using C++.  
-
-### Get in Touch:  
-- 📧 **Email**: [02fe23bcs004@kletech.ac.in](mailto:02fe23bcs004@kletech.ac.in)  
-- 🌐 **LinkedIn**: [Poorvi Jambigi](https://linkedin.com/in/poorvi-jambigi)  
-- 📷 **Instagram**: [poorvi_jambigi_11](https://instagram.com/poorvi_jambigi_11)  
-- 👩‍💻 **LeetCode**: [02fe23bcs004](https://leetcode.com/02fe23bcs004)  
-
----
 
 ## 🌟 About the Project  
 
